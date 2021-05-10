@@ -1,18 +1,3 @@
-sendData = () => {
-    const formData = new FormData(document.getElementById('donorForm'));
-    const formObject = Object.fromEntries(formData);
-
-    const options = {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formObject)
-    };
-
-    fetch('donor', options);
-}
-
 window.addEventListener('DOMContentLoaded', () => {
     const selectCountry = document.getElementById("selectCountry");
     const options = countryOptions;
